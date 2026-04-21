@@ -5,6 +5,7 @@ wp-admin/
 wp-includes/
 wp-config.php
 wp-config-sample.php
+local-xdebuginfo.php
 
 #################################################
 # Contenido dinámico (NO versionar)

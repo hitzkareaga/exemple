@@ -1,0 +1,24 @@
+# WordPress core (NO versionar)
+wp-admin/
+wp-includes/
+
+# Subidas (imágenes, media)
+wp-content/uploads/
+
+# Caché
+wp-content/cache/
+
+# Config sensible
+wp-config.php
+
+# Logs
+*.log
+
+# Dependencias front-end
+node_modules/
+
+# MacOS
+.DS_Store
+
+# Local WP (si aplica)
+.local/

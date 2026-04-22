@@ -20,10 +20,25 @@ if ( ! function_exists( 'twentytwentyfive_post_format_setup' ) ) :
 	 */
 	function twentytwentyfive_post_format_setup() {
 		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video', 'post-thumbnails' ) );
-		add_theme_support('menus');
+		add_theme_support('menus')
 	}
 endif;
 add_action( 'after_setup_theme', 'twentytwentyfive_post_format_setup' );
+
+function registrer_menus() {
+	register_nav_menus([
+		'main-menu' => 'Main menu',
+		'legal-menu'     => 'Legal menu (footer)',
+	]);
+}
+add_action('init', 'registrer_menus');
+
+// Permet usar [any_actual] en continguts
+function shortcode_current_year()
+{
+	return date('Y');
+}
+add_shortcode('current_year', 'shortcode_current_year');
 
 // Enqueues editor-style.css in the editors.
 if ( ! function_exists( 'twentytwentyfive_editor_style' ) ) :

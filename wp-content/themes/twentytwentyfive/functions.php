@@ -19,7 +19,8 @@ if ( ! function_exists( 'twentytwentyfive_post_format_setup' ) ) :
 	 * @return void
 	 */
 	function twentytwentyfive_post_format_setup() {
-		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
+		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video', 'post-thumbnails' ) );
+		add_theme_support('menus');
 	}
 endif;
 add_action( 'after_setup_theme', 'twentytwentyfive_post_format_setup' );
